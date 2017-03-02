@@ -1,0 +1,418 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;                               /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;          /* приводим все к одной базовой линии */
+    background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, td img {
+    vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+    margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+    padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+    min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+    color: #666;
+    text-align: left;
+    font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+    min-height:100%;
+    font-family: Georgia,sans-serif;
+
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+    color: #e6618c;
+    text-decoration: underline;
+}
+a:hover {
+    color: #fdf208;
+    text-decoration:none;
+}
+a:focus, a:active {
+    color: #c83867;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+img{
+
+    max-width:100%;
+}
+.clr{
+    clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-block-main{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header-top{
+margin-bottom: 45px;
+}
+.top-menu{
+    font-size: 0.875em;
+    border-bottom:3px solid #f1f1f1;
+}
+.top-menu li{
+    float: left;
+    padding: 40px 18px 15px 0;
+}
+.top-menu li a{
+    color: #2e2e2e;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 16px;
+}
+.top-menu  li a:hover{
+    color: #9f9f9f;
+    border-bottom: 3px solid #0099ff;
+}
+.header-bottom{
+    margin-bottom: 45px;
+
+}
+.left-top{
+    float: left;
+}
+.left-top h1 a{
+    text-decoration: none;
+    font-size: 2.25em;
+    color: #333333;
+}
+
+.left-top p{
+    margin-top: 15px;
+    font-size: 0.75em;
+    color: #999999;
+}
+.right-top{
+    position: relative;
+    float: right;
+    top:30px;
+}
+.search-bar{
+    margin-right: 5px;
+    float: left;
+    background: #f1f1f1;
+    font-size: 0.75em;
+    padding: 10px 20px 10px 8px;
+    border-radius: 6px;
+    border: none;
+}
+.search-btn{
+    background: #0099ff;
+    color: #fff;
+    font-size: 0.75em;
+    padding: 10px 8px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-box-bacground{
+    background: #f1f1f1;
+    overflow: hidden;
+    padding: 15px 0 15px 0;
+    margin-bottom: 40px;
+}
+.slider-text{
+    float: left;
+    width: 37.5%;
+    margin-top: 150px;
+    margin-bottom: 90px;
+}
+.slider-text h1{
+    font-size: 2.25em;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.slider-text p{
+    font-size: 1em;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.slider-text a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background:#0099ff;
+    border-radius: 8px;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+.slider{
+    margin-top: 10px;
+    float: right;
+    width: 57.3%;
+}
+.unslider-nav{
+    position: relative;
+    top:-50px;
+    left: -230px;
+}
+.main{
+    margin-bottom: 40px;
+}
+
+.img{
+    float: left;
+    width: 49%;
+}
+.main4-block{
+    float: right;
+    width: 49%;
+    margin-left: 2%;
+}
+.main4-block article{
+    float: left;
+    width: 47.8%;
+    margin-left: 2.3%;
+    margin-bottom: 30px;
+}
+.main4-block article:first-child{
+    margin-left: 0;
+}
+#third{
+    margin-left: 0;
+}
+.main4-block article img{
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.main4-block article h3 a{
+    display: block;
+    text-decoration: none;
+    color: #0099ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.main4-block p {
+    font-size: 0.8125em;
+    line-height: 1.5;
+    text-align: center;
+}
+.shout{
+    background: #e0e0e0;
+    border-left: 10px solid #0099ff;
+    /*padding: 30px 37px 30px 33px;*/
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.shout-text{
+    padding: 30px 37px 30px 33px;
+    float: left;
+}
+.shout-text h1{
+    font-size:2.25em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.shout-text h3{
+    font-size: 1.125em;
+    color: #333333;
+}
+.shout-link{
+    padding: 30px 37px 30px 33px;
+    float: right;
+}
+.shout-link a{
+    position: relative;
+    top:20px;
+    text-decoration: none;
+    font-size: 1.625em;
+    padding: 18px 10px;
+    border-radius:6px;
+    border: none;
+    background: #0099ff;
+    color: #fff;
+    text-transform: uppercase;
+}
+.shout-link a:hover{
+    text-decoration: underline;
+}
+footer{
+    border-top: #000000;
+    background: #1a1a1a;
+    padding: 40px 0;
+}
+.footer4-main article{
+    float: left;
+    width: 23.4%;
+    margin-left: 1.6%;
+
+}
+.footer4-main article:first-child{
+    margin-left: 0;
+}
+.footer4-main article h3{
+    font-size: 0.75em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer4-main article img{
+    display: block;
+    border: 1px solid #555555;
+    margin:0 auto 20px auto;
+}
+.footer4-main article p{
+    font-size:0.75em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+
+}
+
+
+a.footer-readmore{
+    float: right;
+    text-decoration: none;
+    color: #0099ff;
+}
+a.footer-readmore:hover{
+    text-decoration: underline;
+}
+.footer-menu {
+    padding-left: 13px;
+    list-style: url("../photo/footerliststyle.png");
+
+}
+.footer-menu li{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #232323;
+}
+.footer-menu li:first-child{
+    padding-top: 0;
+}
+
+.footer-menu li a{
+    text-decoration: none;
+    color: #0099ff;
+}
+.footer-menu li a:hover{
+    text-decoration: underline;
+}
+.article{
+    float: left;
+}
+.article h4{
+font-size: 0.875em;
+}
+.article h5{
+    font-size: 0.625em;
+    margin-bottom: 19px;
+}
+.name{
+    color: #666666;
+    font-size: 0.8125em;
+    padding: 10px!important;
+    width: 100%;
+    background: #232323;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+
+
+}
+.email{
+    color: #666666;
+    font-size: 0.8125em;
+    padding: 10px;
+    width: 100%;
+    background: #232323;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+
+
+}
+.subject{
+    color: #666666;
+    font-size: 0.8125em;
+    padding: 10px!important;
+    width: 100%;
+    background: #232323;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+
+
+}
+.textarea{
+    color: #666666;
+    font-size: 1.1em;
+    padding: 10px;
+    width: 100%;
+    background: #232323;
+    border-radius: 6px;
+    border: none;
+    margin-bottom:10px;
+
+}
+.footer-sbm{
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    padding: 10px;
+    background: #0099ff;
+    border-radius: 8px;
+    border: none;
+
+}
+
+
